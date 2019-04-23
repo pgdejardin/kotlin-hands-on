@@ -1,4 +1,4 @@
-@file:Suppress("UNUSED_PARAMETER", "UNREACHABLE_CODE")
+@file:Suppress("UNUSED_PARAMETER", "UNREACHABLE_CODE", "MayBeConstant")
 
 package fr.xebia.xke
 

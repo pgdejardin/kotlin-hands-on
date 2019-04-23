@@ -3,9 +3,8 @@ package fr.xebia.xke
 import io.kotlintest.matchers.shouldBe
 import io.kotlintest.matchers.shouldEqual
 import io.kotlintest.specs.StringSpec
-import kotlinx.coroutines.experimental.CommonPool
-import kotlinx.coroutines.experimental.async
-import kotlinx.coroutines.experimental.runBlocking
+import kotlinx.coroutines.async
+import kotlinx.coroutines.runBlocking
 import java.time.LocalDate
 import java.util.logging.Handler
 import java.util.logging.Level
@@ -40,7 +39,7 @@ class Advanced_CoroutineTest : StringSpec({
     "giveTreatment() to patient should return aspirin after a delay of one second" {
         val start = System.currentTimeMillis()
         val res = runBlocking {
-            val promise = async(CommonPool) {
+            val promise = async {
                 giveTreatment()
             }
             promise.await()

@@ -9,7 +9,7 @@ import io.kotlintest.specs.StringSpec
 class FP_MockTest : StringSpec({
 
     mapOf(
-        mapOf("name" to "Terah", "age" to "34") to User("Terah", 34).valid<NonEmptyList<String>, User>(),
+        mapOf("name" to "Terah", "age" to "34") to User("Terah", 34).valid(),
         mapOf("age" to "34") to NonEmptyList.of("name is not present").invalid(),
         mapOf("name" to "", "age" to "34") to NonEmptyList.of("name is blank").invalid(),
         mapOf("name" to "Terah") to NonEmptyList.of("age is not present").invalid(),

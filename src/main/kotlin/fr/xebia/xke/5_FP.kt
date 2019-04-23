@@ -5,6 +5,8 @@ import arrow.core.*
 import arrow.core.Either
 import arrow.core.flatMap
 import arrow.data.*
+import arrow.data.extensions.nonemptylist.semigroup.semigroup
+import arrow.data.extensions.validated.applicative.applicative
 
 /**
  * This class validates user data in two ways:

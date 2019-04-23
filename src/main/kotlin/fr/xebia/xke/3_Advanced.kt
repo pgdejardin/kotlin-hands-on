@@ -1,9 +1,8 @@
 package fr.xebia.xke
 
-import kotlinx.coroutines.experimental.delay
+import kotlinx.coroutines.delay
 import java.util.logging.Level
 import java.util.logging.Logger
-import kotlin.coroutines.experimental.buildSequence
 
 /**
  * Operator overloading
@@ -39,7 +38,7 @@ data class Vector(val dx: Int, val dy: Int) {
  * For the brave: https://github.com/Kotlin/kotlin-coroutines/blob/master/kotlin-coroutines-informal.md
  */
 // TODO implement a Fibonacci sequence generator using yield suspending function
-fun fibonacciSeq(): Sequence<Int> = buildSequence {
+fun fibonacciSeq(): Sequence<Int> = sequence {
     var a = 0
     var b = 1
 
